@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンライン飲み会 参加確認アンケート</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>オンライン飲み会 参加確認アンケート</h1>
+    <form id="survey-form">
+        <div>
+            <label for="user-name">名前:</label>
+            <select id="user-name" name="user-name" required>
+                <option value="">選択してください</option>
+                <option value="いいづか">いいづか</option>
+                <option value="うまつ">うまつ</option>
+                <option value="れいちろ">れいちろ</option>
+                <option value="けたろう">けたろう</option>
+                <option value="ゆうと">ゆうと</option>
+                <option value="ともゆき">ともゆき</option>
+                <option value="すずっくん">すずっくん</option>
+                <option value="あゆむ">あゆむ</option>
+                <option value="けんじ">けんじ</option>
+                <option value="りょうた">りょうた</option>
+            </select>
+        </div>
+        <div id="date-options">
+            <!-- 日付ごとの選択肢をここに追加します -->
+        </div>
+        <button type="button" id="save-button">保存</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/client-dynamodb/dist/aws-sdk-client-dynamodb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid/dist/umd/uuidv4.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="https://example.com/lambda-endpoint.js"></script>
+</body>
+</html>

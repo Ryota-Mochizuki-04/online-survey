@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem(`surveyResponses_${userName}`, JSON.stringify(responses));
 
         // Lambda関数のエンドポイントにデータを送信
-        const apiUrl = 'https://your-api-gateway-endpoint.amazonaws.com/prod/saveSurveyResponse';
+        const apiUrl = 'https://https://l5cmhf6us1.execute-api.ap-northeast-1.amazonaws.com/prod/saveSurveyResponse';
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',

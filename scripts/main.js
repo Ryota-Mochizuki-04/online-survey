@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
             responses[key] = value;
         });
 
+        // user-nameをresponsesから削除
+        delete responses['user-name'];
+
         // データをローカルストレージに保存
         localStorage.setItem(`surveyResponses_${userName}`, JSON.stringify(responses));
 

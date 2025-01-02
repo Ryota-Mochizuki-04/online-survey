@@ -98,11 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // フォームデータをオブジェクトに変換
         formData.forEach((value, key) => {
-            responses[key] = value;
+            if (key !== 'user-name') {
+                responses[key] = value;
+            }
         });
-
-        // user-nameをresponsesから削除
-        delete responses['user-name'];
 
         // データをローカルストレージに保存
         localStorage.setItem(`surveyResponses_${userName}`, JSON.stringify(responses));

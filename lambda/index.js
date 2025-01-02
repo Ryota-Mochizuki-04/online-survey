@@ -24,12 +24,22 @@ exports.handler = async (event) => {
         await client.send(command);
         return {
             statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+                "Access-Control-Allow-Headers": "Content-Type"
+            },
             body: JSON.stringify({ message: 'Data saved successfully' }),
         };
     } catch (error) {
         console.error("Error saving to DynamoDB", error);
         return {
             statusCode: 500,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+                "Access-Control-Allow-Headers": "Content-Type"
+            },
             body: JSON.stringify({ message: 'Failed to save data' }),
         };
     }

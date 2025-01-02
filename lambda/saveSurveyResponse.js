@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 exports.handler = async (event) => {
     const client = new DynamoDBClient({ region: "ap-northeast-1" });
-    const TABLE_NAME = "tenma-online-somethin";
+    const TABLE_NAME = "tenma-online-something";
 
     const { userName, responses } = JSON.parse(event.body);
     const timestamp = new Date().toISOString();
